@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled sorted 
+7992517619b142dbc87e9a7732cfaf7122be9359 refs/heads/main
+ba710532e01b78316d94d6cba07ffde0f7b3764c refs/tags/derive-adhoc-0.1.0
+^c4660d38e5a668f7928b573a46ff529fcbf1d423
+67d0ea949826fedf46640f3a5f33096d0d9ebf29 refs/tags/v0.0.1
+^2b7c2ba6be81c7905d426a1a85f34fe3a4a438a4

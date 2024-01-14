@@ -1,0 +1,10 @@
+# pack-refs with: peeled fully-peeled sorted 
+d61445308f7c164fc5fbd07788fb38181694da00 refs/heads/main
+60d7bb3ed639a150a937ab14a93693bfbdb9bef3 refs/tags/fixed-capacity-vec-0.0.1
+^4ca85252a8163021256b6cf84b8c9f722d6446f0
+14400da2abfd2b1238e43cecb9fbf1f070740bae refs/tags/fixed-capacity-vec-0.1.0
+^144b77db3c060ed8b19dc480b64e440e6d8af3e9
+460cdd3a01175f4ad356cbfee5a10e732ca093fe refs/tags/fixed-capacity-vec-1.0.0
+^46fff69e4e3db96a94c917b42a9b9d9b61da936d
+47851fe10d8b635cfe88656262e0423b5252c645 refs/tags/fixed-capacity-vec-1.0.1
+^d61445308f7c164fc5fbd07788fb38181694da00

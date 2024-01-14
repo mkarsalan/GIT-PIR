@@ -1,0 +1,14 @@
+# pack-refs with: peeled fully-peeled sorted 
+c3be729bf1c1d79ca68e115923cb0bc8e8022f95 refs/heads/master
+5f177e40a08f0d44ae5c0fce8f5c904905d5ea8a refs/tags/pyptlib-0.0.1
+^072babbb2406d9fce212f449615ca68deb14678c
+0a0b91dbd40bc7990566dbe8883cc23d963cfc4d refs/tags/pyptlib-0.0.2
+^4e0640de9c2e9cbb7f5fcab913bc7e60d372cca6
+a5702ee2e261909be6998fbedcadf69674b02557 refs/tags/pyptlib-0.0.3
+^cb76e10f39e0fe9ba51cf97f2f816b37e3fc0524
+755d58ae2543d1440cae89cf2d2295595e40cb77 refs/tags/pyptlib-0.0.4
+^987f2cc5d4897bb1254c24d1d6db9fa8fc5447ae
+c092737d87e56c1e06805399ce89e64075c5db84 refs/tags/pyptlib-0.0.5
+^a0463fec154f9f07d428661603639f9a9e08c214
+8168a14b7accd9d160c305b103a926cce60fd172 refs/tags/pyptlib-0.0.6
+^370a5bc0c7dc9ba23f28411a483b7df2603adf7f

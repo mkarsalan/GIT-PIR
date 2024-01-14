@@ -1,0 +1,28 @@
+# pack-refs with: peeled fully-peeled sorted 
+183adbfb3f50f308ea6f4bde50ef934434a323e5 refs/heads/main
+f89d0119c3ffb65c4debaffca74959617fe2cd5a refs/tags/trunnel-1.1
+^278b435772fc6cc733c0944bad22d60816fe1419
+ea6c09c3a767e6e3f4e76b43fa44a2ab4e00388e refs/tags/trunnel-1.2
+^e852cdcd143470bb92faa0eb1d17a72ade7466d1
+be109fce15b93a5c40645bfb7b4c0533dd8e4282 refs/tags/trunnel-1.3
+^1fb393e00ee0897f2660abe4d2d286159faec094
+58c4270c12d94f8c6ba41122384ebae900f6b032 refs/tags/trunnel-1.4.1
+^caeb549da47e44532a22dcb5baffaf82856db24e
+fd51d4f952e171cba35170f843fcebff8d679b2c refs/tags/trunnel-1.4.2
+^29ff21960609208bdffe8ec295e597fd997d889f
+5c59fece035ae730c0ad1e3f397e4a3ffe819064 refs/tags/trunnel-1.4.3
+^0795ce5eaeae12b54b8fa756cd51c35d818e36c1
+ae7e12a2c6d0e9aa99370126bd35113bbc10c7e0 refs/tags/trunnel-1.4.4
+^5c0c45ab8e66ec7299e553d2e7d92289a2796cf4
+afdda9963cdd443ac7088609bf3a5d2a41fbd1de refs/tags/trunnel-1.4.5
+^1568c9ca281b4cd4d10ef65ef2bcf0a8a5006135
+c6b2cee27b3418c52ea42660a372739324a9ae24 refs/tags/trunnel-1.4.6
+^26713665d320b5e758dee8c52ffeaf330283c414
+3b54adb9dbd0c07149fe4e3e237ff2e0970b9b62 refs/tags/trunnel-1.5
+^a27cad773a903d1691d3587c7fcdcfc76fe7ec03
+101453a7dc7ecd0a2a8e5dd4c1d9b3cd1ece7add refs/tags/trunnel-1.5.1
+^7ab910c32d78196a66d483663afbdf76857359a4
+c714c5f615067f3d84330bf9707f9a5aa20a14cd refs/tags/trunnel-1.5.2
+^2aa86b0321a5fae99de1a1db2901f705165928f2
+f2f22ef3c5cbf8206f60ed0b49df815b0db428f6 refs/tags/trunnel-1.5.3
+^bd26d565e8b7e1f637054a75d6bc786f709fff19

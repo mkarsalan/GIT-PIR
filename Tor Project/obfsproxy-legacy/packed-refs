@@ -1,0 +1,12 @@
+# pack-refs with: peeled fully-peeled sorted 
+94ebc4c3edf1e3e5f313444e59981ac557578df5 refs/heads/master
+e3ab533010f2844b98da60f61ab1e5df1a1aac03 refs/tags/obfsproxy-0.1.0
+^dbb905231171f3531a185eff7704812baa18049e
+3fcee9c759874ffc11930c88feb9814970838fd9 refs/tags/obfsproxy-0.1.1
+^3f1006aaa122441fa48ef2457f0c1f1920718e41
+60be8366c729c352efb23b055787af31a1474e17 refs/tags/obfsproxy-0.1.2
+^fb132ee04e8480be31c3c17aba4ff9eb27821be0
+11eb53be8a7ec945a825ccbf28bcc887b3b25c87 refs/tags/obfsproxy-0.1.3
+^8cf684e052cf290ee2c7fcf8290d3f4cb3cf5c5d
+8b224bbe5392931c5fa949bcf25bda94dc8bb63d refs/tags/obfsproxy-0.1.4
+^94ebc4c3edf1e3e5f313444e59981ac557578df5

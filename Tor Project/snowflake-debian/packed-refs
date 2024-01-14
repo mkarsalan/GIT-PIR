@@ -1,0 +1,24 @@
+# pack-refs with: peeled fully-peeled sorted 
+ba9da406e16a134e41dd226ce6291359e591ede8 refs/heads/debian/sid
+3cad85978f0813fb0723a17a8e8259cbfc051b1f refs/tags/upstream/0.2.2+git20210524.ae7cc47
+^33c29ceae8c4173d5c8a1ec6bb67af4c338f8ef8
+364b5be56111187261ad9988291db7b02423089d refs/tags/upstream/1.0.0
+^82deeb7b7201bb39d652fe95160566717ab337f2
+8e0b5bd20a91fabbdaa156ae3b58d35d7e8d4d71 refs/tags/v1.0.0
+fdc10fd08a234e3ee760e225d23c9e0187447a02 refs/tags/webext-0.0.1
+4b6871a24e857201357e614657a6df223639e2c8 refs/tags/webext-0.0.10
+61d8eb5ef03204e2ca1fa2d8424a6d3572f58c96 refs/tags/webext-0.0.11
+d064e54db914fbeef7438aa41f72bad5d1a3ea7e refs/tags/webext-0.0.12
+338f1792b8a917abd2f2682b92c9149a1ba27b3b refs/tags/webext-0.0.13
+e6f9211d133f7d7bef3127421f7e8109365383fd refs/tags/webext-0.0.2
+92af2246767bdbf389c440aa705f3ac8b8aa64f0 refs/tags/webext-0.0.3
+2cf0c73b22324b2ebe863e9f99d82071c2fc3d1d refs/tags/webext-0.0.4
+c02c4cfbbd5ae919cf52a3566b593e633fd3799e refs/tags/webext-0.0.5
+bd43c345db0ef139bc2e598433d0c5f7af4d843a refs/tags/webext-0.0.6
+b46e7f127a43b9df7ff802c942cb3484c57b0d32 refs/tags/webext-0.0.7
+299c12b2e91454d2ef4f2c5203cc212a2674a23e refs/tags/webext-0.0.8
+0b55fd307a41214d11d266f684e948b5566cdb77 refs/tags/webext-0.0.9
+2f37a73e71e6fa314196e276a51162f4731a7183 refs/tags/webext-0.1.0
+07f2cd8073168f26044aba1f9971469355d30e53 refs/tags/webext-0.2.0
+310890aa1461ed1d18bc9c1c70755cc1862b81e3 refs/tags/webext-0.2.1
+03315dde029d37d93f894c6ae4932851fd1460a1 refs/tags/webext-0.2.2
