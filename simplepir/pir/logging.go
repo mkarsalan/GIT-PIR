@@ -39,10 +39,10 @@ func writeToCSV() {
 	// filePath := "../../doublepir_results.csv"
 	// filePath := "../../concurrent_results.csv"
 	// filePath := "../../tor_results.csv"
-	filePath := "../../rate_results.csv"
+	filePath := "../../results/results.csv"
 
 	if (FILE_NAME != "") {
-		filePath = "../../" + FILE_NAME + ".csv"
+		filePath = "../../results/" + FILE_NAME + ".csv"
 	}
 	// fmt.Println("==> Saving to:", filePath)
 
