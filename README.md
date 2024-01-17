@@ -7,63 +7,108 @@ This repository contains steps to reproducible results for the paper GIT-PIR: Pr
 
 To run the GIT-PIR code, install Go and a C compiler.
 
-To produce the plots, install Python 3, NumPy and Matplotlib.
+To produce the plots, install Python 3, Anaconda, NumPy, Seaborn Library and Matplotlib.
 
 
 
 ## Reproducing results from the paper
 
-* Table 1:
+* Get baseline times to clone Tor repositories
+```
+cd TorProject/
+nano clone_repos.sh
+``` 
+update `path` in clone_repos.sh
+
+```
+./clone_repos.sh
+```
+
+This would generate `cloning_times.csv` in `TorProject/` directory. This is the baseline time to clone git repositories
+
+
+
+* Confirm local Git recognizes PIR protocol. This would replace any version of git present on your system.
+```
+cd git-master
+make install
+~/bin/./git clone pir://<username>@192.168.0.240:<path_to>/TorProject/Server_Repositories/gettor-ansible
+```
+
+This should allow "pir" as a valid protocol and should not output "invalid protocol". However, since the server side isn't running, the command would still fails.
+
+
+
+* Microbenchmarks of SimplePIR for 1GB database:
 ```
 cd pir/
-go test Table_1
-cd ../results
-python3 table_1.py
+go test TestBenchmarkSimplePirSingle
 ``` 
 
-This would create `table_1.csv` in `results/` directory
+This would create `results_simplePIR_benchmarks.csv` in `results/` directory
 
 
-* Table 2:
+
+* Microbenchmarks of SimplePIR for database of varying sizes:
 ```
 cd pir/
-go test Table_2
-cd ../results
-python3 table_2.py
+go test TestSimplePIR
 ``` 
 
-This would create `table_2.csv` in `results/` directory
+This would create `results_simplePIR.csv` in `results/` directory
 
 
-* Figure 8 and 9:
+
+* Generate results for Tor repositories split into multiDB, ran sequentially:
 ```
 cd pir/
-go test Figure_8_9
-cd ../results
-python3 figure_8_9.py
+go test TestTorReposSplitIntoMultiDBSequentially
 ``` 
 
-This would create `figure_8.png` and `figure_9.png` in `results/` directory
+This would create `results_tor_repos_split_into_multi_db_sequentially.csv` in `results/` directory
 
 
-* Figure 12:
+
+* Generate results for Tor repositories split into multiDB, ran sequentially, for varying chunk_sizes:
 ```
 cd pir/
-go test Figure_12
-cd ../results
-python3 figure_12.py
+go test TestTorReposSplitIntoMultiDBSequentially
 ``` 
 
-This would create `figure_12.png` in `results/` directory
+This would create `results_tor_repos_split_into_multi_db_sequentially.csv` in `results/` directory
 
 
-* Figure 10, 11 and 13:
+
+* Generate results for cloning 333 Tor repositories split into multiDB, ran in parallel, for single chunk_size:
 ```
 cd pir/
-go test Figure_10_11_13
-cd ../results
-python3 figure_10_11_13.py
+go test TestTorReposSplitIntoMultiDBForSingleChunkSize
 ``` 
 
-This would create `figure_10.png`, `figure_11.png` and `figure_13.png` in `results/` directory
+This would create `results_tor_repos_split_into_multiserver_for_single_chunk_size.csv` in `results/` directory
+
+
+
+* Generate results for Tor repositories split into multiDB, ran in parallel, for varying chunk_sizes:
+```
+cd pir/
+go test TestTorReposSplitIntoMultiDB
+``` 
+
+This would create `results_tor_repos_split_into_multi_db_parallel.csv` in `results/` directory
+
+
+
+* Generate results for Tor repositories split into multiDB, for equal number of chunks, and varying chunk_sizes:
+```
+cd pir/
+go test TestTorReposWithEqualNumOfChunks
+``` 
+
+This would create `results_tor_repos_with_equal_chunk_size.csv` in `results/` directory
+
+
+## Reproducing results from the paper
+
+Once the results are generated, run the python notebook `Graphs.ipynb` in `results` directory.
 
