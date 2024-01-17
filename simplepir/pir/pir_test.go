@@ -268,8 +268,8 @@ func createTorReposWithEqualNumOfChunks(fileSizes []int, chunk_bytes int) {
 
 ////////////////////////////////////////////
 
-func TestTorReposWithEqualNumOfChunks(t *testing.T) {	// Same database size (i.e 1GB), but different chunk sizes.
-	t.Skip("Skipping...")
+func TestTorReposWithEqualNumOfChunks(t *testing.T) {
+	// t.Skip("Skipping...")
 
 	FILE_NAME = "results_tor_repos_with_equal_chunk_size"
 	OPTIONAL_FIELD = "CHUNK_SIZE (MB)"
@@ -361,10 +361,10 @@ func createTorReposSplitIntoMultiserver(fileSizes []int, chunk_bytes int, parall
 
 ////////////////////////////////////////////
 
-func TestTorReposSplitIntoMultiserver(t *testing.T) {	// Same database size (i.e 1GB), but different chunk sizes.
-	t.Skip("Skipping...")
+func TestTorReposSplitIntoMultiDB(t *testing.T) {
+	// t.Skip("Skipping...")
 
-	FILE_NAME = "results_tor_repos_split_into_multiserver"
+	FILE_NAME = "results_tor_repos_split_into_multi_db_parallel"
 	OPTIONAL_FIELD = "CHUNK_SIZE (MB)"
 
 	torFileSizesInBytes := torFiles()
@@ -427,8 +427,8 @@ func createTorReposSplitIntoMultiserverForSingleChunkSize(fileSizes []int, chunk
 	return
 }
 
-func TestTorReposSplitIntoMultiserverForSingleChunkSize(t *testing.T) {
-	t.Skip("Skipping...")
+func TestTorReposSplitIntoMultiDBForSingleChunkSize(t *testing.T) {
+	// t.Skip("Skipping...")
 
 	FILE_NAME = "results_tor_repos_split_into_multiserver_for_single_chunk_size"
 	OPTIONAL_FIELD = "CHUNK_SIZE (MB)"
@@ -447,10 +447,10 @@ func TestTorReposSplitIntoMultiserverForSingleChunkSize(t *testing.T) {
 
 ////////////////////////////////////////////
 
-func TestTorReposSplitIntoMultiserverSequentially(t *testing.T) {	// Same database size (i.e 1GB), but different chunk sizes.
-	t.Skip("Skipping...")
+func TestTorReposSplitIntoMultiDBSequentially(t *testing.T) {
+	// t.Skip("Skipping...")
 
-	FILE_NAME = "results_tor_repos_split_into_multiserver_sequentially"
+	FILE_NAME = "results_tor_repos_split_into_multi_db_sequentially"
 	OPTIONAL_FIELD = "CHUNK_SIZE (MB)"
 
 	torFileSizesInBytes := torFiles()
@@ -471,9 +471,9 @@ func TestTorReposSplitIntoMultiserverSequentially(t *testing.T) {	// Same databa
 ////////////////////////////////////////////
 
 func TestSimplePIR(t *testing.T) {
-	t.Skip("Skipping...")
+	// t.Skip("Skipping...")
 	
-	FILE_NAME = "results_single_server_benchmark_for_rate"
+	FILE_NAME = "results_simplePIR"
 
 	numCPUs := runtime.GOMAXPROCS(0)
 	fmt.Println("\nNumber of CPUs: ", numCPUs)
@@ -482,37 +482,31 @@ func TestSimplePIR(t *testing.T) {
 		for ROWS = 10; ROWS <= 10000000000; ROWS *= 10 {
 			for COLS = 10; COLS <= 10000000000; COLS = 10 * COLS {
 				for ITERATION = 1; ITERATION <= 1; ITERATION++ {
-					if (ROWS * COLS >= 100000000000){
-						continue
-					}
+					// if (ROWS * COLS >= 100000000000){
+					// 	continue
+					// }
 
 					SICES_SAME = 1
 
 					repo := createDummyFile(1)
 					// repo := createDummyFile(REPO_SIZE * (1024.0 * 1024.0))
-					fmt.Println("==> repo:", len(repo))
+					// fmt.Println("==> repo:", len(repo))
 					vals := make([]uint64, ROWS)
 					for i := 0; i < ROWS; i++ {
 						vals[i] = 150
 					}
 
 					N := uint64(ROWS)
-					d := uint64(COLS) // bits //  20000000 // 2mb
-
-					// N := uint64(1 << 20)
-					// d := uint64(2048)					
-					// fmt.Println("==> uint64(1 << 4):", uint64(1 << 4))
+					d := uint64(COLS)
 
 					fmt.Println("..\n..\n..\n\n********* ", "ROWS:", ROWS, ", COLS:", COLS, ", REPO_SIZE:", REPO_SIZE, "MB | ITERATION:", ITERATION, " *********")
 					fmt.Println("")
 
 					pir := SimplePIR{}
-					// pir := DoublePIR{}
 
 					fmt.Println("==> SEC_PARAM:", SEC_PARAM)
 
 					p := pir.PickParams(N, d, SEC_PARAM, LOGQ)
-					// p := pir.PickParamsGivenDimensions(1004749, 10, SEC_PARAM, LOGQ)
 
 					originalSize := len(repo)
 					desiredSize := int(p.L)
@@ -586,9 +580,9 @@ func TestSimplePIR(t *testing.T) {
 
 // Benchmark SimplePIR performance.
 func TestBenchmarkSimplePirSingle(t *testing.T) {
-	t.Skip("Skipping...")
+	// t.Skip("Skipping...")
 
-	FILE_NAME = "results_benchmark_offline_download_throughput"
+	FILE_NAME = "results_simplePIR_benchmarks"
 	OPTIONAL_FIELD = "ONLINE_COMM"
 
 	f, err := os.Create("simple-cpu.out")
@@ -600,10 +594,10 @@ func TestBenchmarkSimplePirSingle(t *testing.T) {
 	d := uint64(1000000) 				// COLS (entry size)
 
 
-	// for ROWS = 10; ROWS <= 10000000000000000; ROWS *= 10 {
-	// 	for COLS = 1; COLS <= 10000000000000000; COLS *= 10 {
-	// 		for iteration := 0; iteration < 1; iteration++ {
-				// if (ROWS * COLS == 100000) { 				// 10000000000 = 1GB
+	for ROWS = 10; ROWS <= 10000000000000000; ROWS *= 10 {
+		for COLS = 1; COLS <= 10000000000000000; COLS *= 10 {
+			for iteration := 0; iteration < 10; iteration++ {
+				if (ROWS * COLS == 10000000000) { 				// 10000000000 = 1GB
 					fmt.Println("==> ROWS: ", ROWS, "COLS: ", COLS)
 
 					// N = uint64(ROWS)	// offline download
@@ -630,8 +624,8 @@ func TestBenchmarkSimplePirSingle(t *testing.T) {
 					fmt.Println("==> online_comm: ", OPTIONAL_FIELD_VALUE)
 
 					writeToCSV()
-	// 			}
-	// 		}
-	// 	}
-	// }
+				}
+			}
+		}
+	}
 }
