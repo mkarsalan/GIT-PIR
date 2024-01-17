@@ -1,0 +1,5 @@
+# pack-refs with: peeled fully-peeled sorted 
+aaef9132d23007803e95b26c9cf251be467f7a9f refs/heads/master
+c423d5e6116b9cae5c2ceb2ac58f239b5047ea42 refs/tags/debian/0.4-1
+^aaef9132d23007803e95b26c9cf251be467f7a9f
+0f7a35e31f4e3f50547d7b2a8a886e4189a03761 refs/tags/upstream/0.4

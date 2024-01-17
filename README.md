@@ -108,7 +108,6 @@ go test TestTorReposWithEqualNumOfChunks
 This would create `results_tor_repos_with_equal_chunk_size.csv` in `results/` directory
 
 
-## Reproducing results from the paper
+## Generating graphs from the paper
 
-Once the results are generated, run the python notebook `Graphs.ipynb` in `results` directory.
-
+Once the results are generated, run the jupyter notebook `Graphs.ipynb` in `results` directory, to generate the graphs.

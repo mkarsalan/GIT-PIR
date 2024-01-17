@@ -1,0 +1,16 @@
+# pack-refs with: peeled fully-peeled sorted 
+3344ea05cfae9512c5358ea2fdc9b204ae7b7bab refs/heads/main
+cc2e027c78a9529dd343340b4507d515579c90e9 refs/tags/bridgestrap-0.0.1
+^37d7978e8a420f4a9acf8d24fc03175a38582927
+55d463a5aba16c8ebc90049e3fc5dd94c2a1a3ca refs/tags/bridgestrap-0.1.0
+^69592d7805d5b532bccc6ae75f00364491389da9
+a8ec5578cffd7dd20cdeced5747904c86499b476 refs/tags/bridgestrap-0.2.0
+^df61aa13e7d5ec41619760c833a129146681c69d
+0bc8c75c62d9365e683be56294e565757bbbefca refs/tags/bridgestrap-0.3.0
+^58edd5623652b1bcb004327065f0c2fcfa318c65
+3e07df7159cd6f2d5109758ad345f2ee4d95fa61 refs/tags/bridgestrap-0.3.1
+^76dfe653b362fa665a0743352dc7bb70be8a9b2f
+4f31f2064076ad444ff8ca6eb7243e2ca8872a12 refs/tags/bridgestrap-0.3.2
+^5ef7cfc1e00f1bc7f8c843f38956f8b7f8c22615
+1c91db6530ce0791816ca24a600d267ccac4aff7 refs/tags/bridgestrap-0.4.0
+^85ae3ed37681c96eeb11af9be41a00039296f266
